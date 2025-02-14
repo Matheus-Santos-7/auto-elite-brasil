@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AutoElite Brasil - Sua concessionária de carros de luxo">
+    <title>AutoElite Brasil | Carros de Luxo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>AutoElite Brasil</h1>
+                <img src="img/lambo-lambo.png" alt="Logo AutoElite Brasil">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#bem-vindo">Bem-vindo</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#veiculos">Veículos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/lambo.jpg" alt="Lamborghini" class="header-image">
+                    </div>
+                    <div class="slide">
+                        <img src="img/Ferrari.jpg" alt="Ferrari" class="header-image">
+                    </div>
+                    <div class="slide">
+                        <img src="img/Mercedes.jpg" alt="Mercedes" class="header-image">
+                    </div>
+                </div>
+                
+                <div class="slider-dots">
+                    <span class="dot active" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            
+            <div class="hero-content">
+                <h1>AutoElite Brasil</h1>
+                <p>Experiência única em Carros de Luxo</p>
+                <a href="#veiculos" class="cta-button">Ver Veículos</a>
+            </div>
+        </div>
+
+        <section id="bem-vindo" class="sobre-section">
+            <div class="container">
+                <div class="sobre-content">
+                    <div class="sobre-text">
+                        <h2 class="section-title">Bem-vindo à AutoElite Brasil</h2>
+                        <p class="sobre-descricao">Há mais de uma década, a AutoElite Brasil se destaca como sinônimo de excelência no mercado de automóveis de luxo. Nossa missão é proporcionar uma experiência única na aquisição do seu veículo premium, combinando expertise automotiva com um atendimento verdadeiramente personalizado.</p>
+                        
+                        <p class="sobre-destaque">Nossa seleção criteriosa de veículos representa o que há de mais refinado no mundo automotivo, desde sedãs executivos até superesportivos exclusivos.</p>
+                        
+                        <div class="sobre-features">
+                            <div class="feature">
+                                <h3>Expertise</h3>
+                                <p>Consultores especializados em marcas premium</p>
+                            </div>
+                            <div class="feature">
+                                <h3>Exclusividade</h3>
+                                <p>Modelos únicos e edições limitadas</p>
+                            </div>
+                            <div class="feature">
+                                <h3>Excelência</h3>
+                                <p>Atendimento personalizado e discreto</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+    </header>
+
+        <main>
+            <section id="inicio" class="inicio-section">
+                <div class="contain">
+                    <div class="inicio-grid">
+                        <div class="inicio-text">
+                            <h2 class="section-title">Redefina seus Padrões de Luxo</h2>
+                            <p class="inicio-descricao">Na AutoElite Brasil, transformamos sonhos automotivos em realidade. Nossa história é pautada pela busca incansável da perfeição, oferecendo aos nossos clientes não apenas veículos, mas verdadeiras obras-primas sobre rodas.</p>
+                            
+                            <div class="inicio-numeros">
+                                <div class="numero-item">
+                                    <span class="numero">10+</span>
+                                    <p>Anos de Excelência</p>
+                                </div>
+                                <div class="numero-item">
+                                    <span class="numero">500+</span>
+                                    <p>Clientes Satisfeitos</p>
+                                </div>
+                                <div class="numero-item">
+                                    <span class="numero">50+</span>
+                                    <p>Modelos Exclusivos</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="inicio-imagem">
+                            <img src="img/showroom.jpg" alt="Showroom AutoElite Brasil" class="showroom-img">
+                        </div> -->
+                    </div>
+                </div>
+            </section>
+
+
+
+        <section id="veiculos" class="container">
+            <h2 class="section-title">Nossos Veículos em Destaque</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <img src="img/Mercedes.jpg" alt="Mercedes-Benz Classe S">
+                    <div class="card-content">
+                        <h3>Mercedes-Benz Classe S</h3>
+                        <p class="car-specs">
+                            <span class="spec-highlight">2024</span> | 
+                            <span class="spec-highlight">0 km</span> | 
+                            <span class="spec-highlight">V8 Biturbo</span>
+                        </p>
+                        <p class="car-description">Luxo e tecnologia em perfeita harmonia. Interior em couro Nappa, teto solar panorâmico.</p>
+                        <p class="car-price">R$ 1.290.000</p>
+                        <a href="carros.html?carro=mercedes" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/BMW.jpg" alt="BMW Série 7">
+                    <div class="card-content">
+                        <h3>BMW Série 7</h3>
+                        <p class="car-specs">
+                            <span>2023</span> | 
+                            <span>3.000 km</span> | 
+                            <span>Hybrid</span>
+                        </p>
+                        <p class="car-description">O ápice do requinte automotivo. Sistema iDrive 8.0, massageador nos bancos.</p>
+                        <p class="car-price">R$ 989.000</p>
+                        <a href="carros.html?carro=bmw" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/Porsche.avif" alt="Porsche Panamera">
+                    <div class="card-content">
+                        <h3>Porsche Panamera Turbo S</h3>
+                        <p class="car-specs">
+                            <span>2024</span> | 
+                            <span>0 km</span> | 
+                            <span>V8 630cv</span>
+                        </p>
+                        <p class="car-description">Esportividade e elegância reunidas. Sport Chrono Package, PCCB.</p>
+                        <p class="car-price">R$ 1.490.000</p>
+                        <a href="carros.html?carro=porsche" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/urus.webp" alt="Lamborghini Urus">
+                    <div class="card-content">
+                        <h3>Lamborghini Urus</h3>
+                        <p class="car-specs">
+                            <span>2023</span> | 
+                            <span>1.500 km</span> | 
+                            <span>V8 650cv</span>
+                        </p>
+                        <p class="car-description">Super SUV com DNA Lamborghini. Interior em Alcantara, rodas 23".</p>
+                        <p class="car-price">R$ 3.990.000</p>
+                        <a href="carros.html?carro=lamborghini" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/Ferrari.jpg" alt="Ferrari F8 Tributo">
+                    <div class="card-content">
+                        <h3>Ferrari F8 Tributo</h3>
+                        <p class="car-specs">
+                            <span>2023</span> | 
+                            <span>0 km</span> | 
+                            <span>V8 720cv</span>
+                        </p>
+                        <p class="car-description">Obra-prima italiana. Pacote carbono, freios CCM, lift system.</p>
+                        <p class="car-price">R$ 4.590.000</p>
+                        <a href="carros.html?carro=ferrari" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="img/bentley.avif" alt="Bentley Continental GT">
+                    <div class="card-content">
+                        <h3>Bentley Continental GT</h3>
+                        <p class="car-specs">
+                            <span>2024</span> | 
+                            <span>0 km</span> | 
+                            <span>W12 650cv</span>
+                        </p>
+                        <p class="car-description">Luxo britânico em sua forma mais pura. Mulliner Package.</p>
+                        <p class="car-price">R$ 3.790.000</p>
+                        <a href="carros.html?carro=bentley" class="card-button">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      
+    </main>
+
+    <!-- <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h4>AutoElite Brasil</h4>
+                    <p>Av. Exemplo, 1000 - São Paulo/SP</p>
+                    <p>Tel: (11) 99999-9999</p>
+                    <p>Email: contato@autoelite.com.br</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AutoElite Brasil. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer> -->
+
+    <script>
+    let currentSlideIndex = 1;
+    const totalSlides = 3;
+    showSlide(currentSlideIndex);
+
+    function moveSlide(n) {
+        showSlide(currentSlideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlide(currentSlideIndex = n);
+    }
+
+    function showSlide(n) {
+        const slides = document.querySelector('.slides');
+        const dots = document.querySelectorAll('.dot');
+        
+        if (n > totalSlides) {
+            currentSlideIndex = 1;
+        }
+        if (n < 1) {
+            currentSlideIndex = totalSlides;
+        }
+        
+        // Move os slides
+        slides.style.transform = `translateX(-${(currentSlideIndex - 1) * 33.333}%)`;
+        
+        // Atualiza os dots
+        dots.forEach(dot => dot.classList.remove('active'));
+        dots[currentSlideIndex - 1].classList.add('active');
+    }
+
+    // Auto-play do slider
+    setInterval(() => {
+        moveSlide(1);
+    }, 5000); // Muda a cada 5 segundos
+    </script>
+</body>
+</html>

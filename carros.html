@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Veículo | AutoElite Brasil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <h1>AutoElite Brasil</h1>
+                <img src="img/lambo-lambo.png" alt="Logo AutoElite Brasil">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#bem-vindo">Bem-vindo</a></li>
+                <li><a href="index.html#inicio">Início</a></li>
+                <li><a href="index.html#veiculos">Veículos</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="carro-detalhes">
+        <div class="container">
+            <div id="carro-info" class="carro-info">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+        </div>
+    </main>
+
+    <!-- <footer class="footer">
+        ... mesmo footer do index.html ...
+    </footer> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const carroId = urlParams.get('carro');
+            
+            const carros = {
+                mercedes: {
+                    nome: "Mercedes-Benz Classe S",
+                    ano: "2024",
+                    km: "0",
+                    motor: "V8 Biturbo",
+                    preco: "R$ 1.290.000",
+                    imagens: ["img/Mercedes.jpg", "img/mercedes-interior1.jpg", "img/mercedes-interior2.jpg"],
+                    descricao: "O Mercedes-Benz Classe S representa o ápice do luxo automotivo. Com acabamento artesanal em couro Nappa, sistema MBUX de última geração e tecnologias inovadoras de assistência ao condutor.",
+                    especificacoes: {
+                        potencia: "500 cv",
+                        torque: "700 Nm",
+                        aceleracao: "4.4s (0-100 km/h)",
+                        velocidadeMaxima: "250 km/h (limitada)",
+                        consumo: "7.8 km/l (cidade) / 11.2 km/l (estrada)"
+                    },
+                    opcionais: [
+                        "Teto Solar Panorâmico",
+                        "Bancos Massageadores",
+                        "Som Burmester 4D",
+                        "Head-up Display",
+                        "Piloto Automático Adaptativo"
+                    ]
+                },
+                bmw: {
+                    nome: "BMW Série 7",
+                    ano: "2023",
+                    km: "3.000",
+                    motor: "Hybrid",
+                    preco: "R$ 989.000",
+                    imagens: ["img/BMW.jpg", "img/bmw-interior1.jpg", "img/bmw-interior2.jpg"],
+                    descricao: "O BMW Série 7 redefine o segmento de luxo com sua tecnologia híbrida de ponta. Interior refinado com acabamentos premium e o mais avançado sistema de entretenimento.",
+                    especificacoes: {
+                        potencia: "394 cv (combinado)",
+                        torque: "600 Nm",
+                        aceleracao: "5.1s (0-100 km/h)",
+                        velocidadeMaxima: "250 km/h (limitada)",
+                        consumo: "16.5 km/l (combinado)"
+                    },
+                    opcionais: [
+                        "Sistema iDrive 8.0",
+                        "Display Curvo BMW",
+                        "Bancos Executivos com Massagem",
+                        "Sistema de Som Bowers & Wilkins",
+                        "Parking Assistant Professional"
+                    ]
+                },
+                porsche: {
+                    nome: "Porsche Panamera Turbo S",
+                    ano: "2024",
+                    km: "0",
+                    motor: "V8 630cv",
+                    preco: "R$ 1.490.000",
+                    imagens: ["img/Porsche.avif", "img/panamera-interior1.jpg", "img/panamera-interior2.jpg"],
+                    descricao: "O Porsche Panamera Turbo S combina o DNA esportivo da marca com luxo e praticidade. Performance excepcional com o conforto de um sedan de luxo.",
+                    especificacoes: {
+                        potencia: "630 cv",
+                        torque: "820 Nm",
+                        aceleracao: "3.1s (0-100 km/h)",
+                        velocidadeMaxima: "315 km/h",
+                        consumo: "6.8 km/l (cidade) / 9.2 km/l (estrada)"
+                    },
+                    opcionais: [
+                        "Sport Chrono Package",
+                        "PCCB (Freios Cerâmicos)",
+                        "Suspensão Pneumática Adaptativa",
+                        "Sistema de Som Burmester 3D",
+                        "Pacote Sport Design"
+                    ]
+                },
+                lamborghini: {
+                    nome: "Lamborghini Urus",
+                    ano: "2023",
+                    km: "1.500",
+                    motor: "V8 650cv",
+                    preco: "R$ 3.990.000",
+                    imagens: ["img/urus.webp", "img/urus-interior1.jpg", "img/urus-interior2.jpg"],
+                    descricao: "O Lamborghini Urus é o primeiro Super Sport Utility Vehicle do mundo. Combina a alma de um super carro com a funcionalidade de um SUV.",
+                    especificacoes: {
+                        potencia: "650 cv",
+                        torque: "850 Nm",
+                        aceleracao: "3.6s (0-100 km/h)",
+                        velocidadeMaxima: "305 km/h",
+                        consumo: "5.2 km/l (cidade) / 7.8 km/l (estrada)"
+                    },
+                    opcionais: [
+                        "Rodas de 23 polegadas",
+                        "Interior em Alcantara",
+                        "Sistema de Som Bang & Olufsen",
+                        "Pacote Off-Road",
+                        "Head-up Display com Navegação"
+                    ]
+                },
+                ferrari: {
+                    nome: "Ferrari F8 Tributo",
+                    ano: "2023",
+                    km: "0",
+                    motor: "V8 720cv",
+                    preco: "R$ 4.590.000",
+                    imagens: ["img/Ferrari.jpg", "img/f8-interior1.jpg", "img/f8-interior2.jpg"],
+                    descricao: "O F8 Tributo é a mais pura expressão do superesportivo V8 da Ferrari. Uma obra-prima da engenharia italiana que homenageia o lendário motor da marca.",
+                    especificacoes: {
+                        potencia: "720 cv",
+                        torque: "770 Nm",
+                        aceleracao: "2.9s (0-100 km/h)",
+                        velocidadeMaxima: "340 km/h",
+                        consumo: "4.2 km/l (cidade) / 7.1 km/l (estrada)"
+                    },
+                    opcionais: [
+                        "Pacote Carbono Exterior",
+                        "Sistema de Elevação Dianteira",
+                        "Freios Carbono-Cerâmicos",
+                        "Telemetria Ferrari",
+                        "Sistema de Som JBL Professional"
+                    ]
+                },
+                bentley: {
+                    nome: "Bentley Continental GT",
+                    ano: "2024",
+                    km: "0",
+                    motor: "W12 650cv",
+                    preco: "R$ 3.790.000",
+                    imagens: ["img/bentley.avif", "img/bentley-interior1.jpg", "img/bentley-interior2.jpg"],
+                    descricao: "O Bentley Continental GT é a definição do grand tourer moderno. Combina artesanato britânico tradicional com tecnologia de ponta para uma experiência única.",
+                    especificacoes: {
+                        potencia: "650 cv",
+                        torque: "900 Nm",
+                        aceleracao: "3.6s (0-100 km/h)",
+                        velocidadeMaxima: "333 km/h",
+                        consumo: "5.5 km/l (cidade) / 8.9 km/l (estrada)"
+                    },
+                    opcionais: [
+                        "Pacote Mulliner",
+                        "Sistema de Áudio Naim",
+                        "Rotating Display",
+                        "Bordados Personalizados",
+                        "City Specification & Touring Specification"
+                    ]
+                }
+            };
+
+            const carro = carros[carroId];
+            if (carro) {
+                document.getElementById('carro-info').innerHTML = `
+                    <div class="carro-info">
+                        <div class="carro-detalhes-content">
+                            <h1>${carro.nome}</h1>
+                            <p class="carro-preco">${carro.preco}</p>
+                            <div class="carro-galeria">
+                                <div class="carro-imagem-principal">
+                                    <img src="${carro.imagens[0]}" alt="${carro.nome}">
+                                </div>
+                            </div>
+                            
+                            <div class="carro-specs-grid">
+                                <div class="spec-item">
+                                    <span class="spec-label">Ano</span>
+                                    <span class="spec-value">${carro.ano}</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Quilometragem</span>
+                                    <span class="spec-value">${carro.km} km</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Motor</span>
+                                    <span class="spec-value">${carro.motor}</span>
+                                </div>
+                            </div>
+
+                            <div class="carro-descricao">
+                                <h2>Descrição</h2>
+                                <p>${carro.descricao}</p>
+                            </div>
+
+                            <div class="carro-info-grid">
+                                <div class="carro-especificacoes">
+                                    <h2>Especificações Técnicas</h2>
+                                    <ul>
+                                        ${Object.entries(carro.especificacoes).map(([key, value]) => `
+                                            <li><strong>${key}:</strong> ${value}</li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                                
+                                <div class="carro-opcionais">
+                                    <h2>Opcionais</h2>
+                                    <ul>
+                                        ${carro.opcionais.map(opcional => `
+                                            <li>${opcional}</li>
+                                        `).join('')}
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="carro-contato">
+                                <a href="tel:+551199999999" class="btn-contato">Ligar Agora</a>
+                                <a href="https://wa.me/551199999999" class="btn-whatsapp" target="_blank">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+
+        function trocarImagem(src) {
+            document.querySelector('.carro-imagem-principal img').src = src;
+        }
+    </script>
+</body>
+</html>
